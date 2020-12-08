@@ -1,4 +1,5 @@
 import { IsOnline } from './IsOnline';
+import Link from 'next/link';
 
 export const Container = ({ children }) => {
   return (
