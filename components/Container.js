@@ -1,32 +1,18 @@
-import { IsOnline } from './IsOnline';
-import Link from 'next/link';
+import OfflineBanner from './OfflineBanner';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
 
-export const Container = ({ children }) => {
+export default function Container({ children, title }) {
   return (
-    <div>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link href='/'>
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/about'>
-                <a>About Us</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/dynamic-content'>
-                <a>Dynamic content</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <>
+      <Head>
+        <title>{title ? `${title} - ` : ''}My App</title>
+      </Head>
+      <OfflineBanner />
+      <Header />
       <main>{children}</main>
-      <IsOnline />
-    </div>
+      <Footer />
+    </>
   );
-};
+}

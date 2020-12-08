@@ -1,5 +1,5 @@
-import { Container } from '../components/Container';
+import Container from '../components/Container';
 
 export default function About() {
-  return <Container>about us</Container>;
+  return <Container>about us page</Container>;
 }

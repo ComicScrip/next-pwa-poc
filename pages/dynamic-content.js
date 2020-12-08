@@ -1,10 +1,11 @@
-import { Container } from '../components/Container';
+import Container from '../components/Container';
 import axios from 'axios';
 import { useState } from 'react';
 
-const getContacts = async () =>
-  (await axios.get('https://contacts-api.comicscrip.duckdns.org/contacts'))
-    .data;
+const getContacts = () =>
+  axios
+    .get('https://contacts-api.comicscrip.duckdns.org/contacts')
+    .then((res) => res.data);
 
 export default function ContactList({ initialContactList = [] }) {
   const [contacts, setContacts] = useState(initialContactList);

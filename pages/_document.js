@@ -1,23 +1,22 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang='en'>
+      <Html lang='en'>
         <Head>
           <link rel='manifest' href='/manifest.json' />
           <link rel='icon' href='/images/icon-192.png' />
           <link rel='apple-touch-icon' href='/images/icon-192.png' />
           <meta name='theme-color' content='#317EFB' />
-          <meta name='Description' content='Put your description here.' />
-          <title>My App</title>
+          <meta name='description' content='Put your description here.' />
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
