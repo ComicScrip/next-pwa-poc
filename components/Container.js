@@ -2,6 +2,7 @@ import OfflineBanner from './OfflineBanner';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import { motion } from 'framer-motion';
 
 export default function Container({ children, title }) {
   return (
@@ -11,7 +12,11 @@ export default function Container({ children, title }) {
       </Head>
       <OfflineBanner />
       <Header />
-      <main>{children}</main>
+      <main>
+        <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
+          {children}
+        </motion.div>
+      </main>
       <Footer />
     </>
   );

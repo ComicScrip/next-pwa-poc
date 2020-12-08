@@ -24,6 +24,16 @@ a {
 }
 
 main {
-  padding: 15px;
+  padding: 20px;
   flex: 1 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+p {
+  line-height: 25px;
+  margin-bottom: 50px;
 }
