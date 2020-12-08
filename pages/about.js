@@ -1,3 +1,5 @@
 import { Container } from '../components/Container';
 
-export default () => <Container>about us</Container>;
+export default function About() {
+  return <Container>about us</Container>;
+}

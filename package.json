@@ -9,6 +9,7 @@
     "relauch": "rm public/sw.js && rm public/workbox-* ; next build && next start"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "next": "10.0.3",
     "next-pwa": "^5.0.0",
     "react": "17.0.1",

@@ -1,3 +1,5 @@
 import { Container } from '../components/Container';
 
-export default () => <Container>home page</Container>;
+export default function Home() {
+  return <Container>home page</Container>;
+}

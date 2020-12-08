@@ -17,6 +17,11 @@ export const Container = ({ children }) => {
                 <a>About Us</a>
               </Link>
             </li>
+            <li>
+              <Link href='/dynamic-content'>
+                <a>Dynamic content</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
