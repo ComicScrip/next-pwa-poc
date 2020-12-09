@@ -1,4 +1,4 @@
-import Container from '../components/Container';
+import Container from '../components/Layout';
 
 export default function Home() {
   return (

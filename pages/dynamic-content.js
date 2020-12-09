@@ -1,4 +1,4 @@
-import Container from '../components/Container';
+import Container from '../components/Layout';
 import axios from 'axios';
 import { useState } from 'react';
 

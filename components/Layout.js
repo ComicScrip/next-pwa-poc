@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 
-export default function Container({ children, title }) {
+export default function Layout({ children, title }) {
   return (
     <>
       <Head>
@@ -13,7 +13,11 @@ export default function Container({ children, title }) {
       <OfflineBanner />
       <Header />
       <main>
-        <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           {children}
         </motion.div>
       </main>
