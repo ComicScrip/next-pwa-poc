@@ -1,8 +1,8 @@
-import Container from '../components/Layout';
+import Layout from '../components/Layout';
 
 export default function Home() {
   return (
-    <Container>
+    <Layout pageTitle='Home'>
       <h1>Home page</h1>
       <p>
         It is a long established fact that a reader will be distracted by the
@@ -184,6 +184,6 @@ export default function Home() {
         neque pulvinar aliquet. Sed ullamcorper volutpat erat, ac pulvinar augue
         vulputate a. Curabitur vulputate tincidunt lacus at tempor.
       </p>
-    </Container>
+    </Layout>
   );
 }

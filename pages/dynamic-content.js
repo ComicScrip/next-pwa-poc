@@ -1,4 +1,4 @@
-import Container from '../components/Layout';
+import Layout from '../components/Layout';
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -12,14 +12,14 @@ export default function ContactList({ initialContactList = [] }) {
   const handleReload = () => getContacts().then(setContacts);
 
   return (
-    <Container>
+    <Layout pageTitle='Dynamic content'>
       <ul>
         {contacts.map((contact) => (
           <li key={contact.id}>{contact.name}</li>
         ))}
       </ul>
       <button onClick={handleReload}>Reload</button>
-    </Container>
+    </Layout>
   );
 }
 

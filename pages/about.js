@@ -1,8 +1,8 @@
-import Container from '../components/Layout';
+import Layout from '../components/Layout';
 
 export default function About() {
   return (
-    <Container>
+    <Layout pageTitle='About us'>
       <h1>About us page</h1>
 
       <p>
@@ -154,6 +154,6 @@ export default function About() {
         neque pulvinar aliquet. Sed ullamcorper volutpat erat, ac pulvinar augue
         vulputate a. Curabitur vulputate tincidunt lacus at tempor.
       </p>
-    </Container>
+    </Layout>
   );
 }
