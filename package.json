@@ -6,14 +6,43 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "relauch": "rm public/sw.js && rm public/workbox-* ; next build && next start"
+    "resetsw-and-lauch": "rm public/sw.js && rm public/workbox-* ; next build && next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint . --fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "axios": "^0.21.0",
-    "framer-motion": "^2.9.5",
     "next": "10.0.3",
     "next-pwa": "^5.0.0",
+    "nextjs-progressbar": "0.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.1.2"
   }
 }

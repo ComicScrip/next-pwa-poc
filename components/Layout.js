@@ -2,7 +2,7 @@ import OfflineBanner from './OfflineBanner';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
-import { motion } from 'framer-motion';
+import NextNprogress from 'nextjs-progressbar';
 
 export default function Layout({ children, pageTitle }) {
   return (
@@ -10,21 +10,15 @@ export default function Layout({ children, pageTitle }) {
       <Head>
         <title>{pageTitle ? `${pageTitle} - ` : ''}My App</title>
       </Head>
+      <NextNprogress
+        color='#29D'
+        startPosition={0.3}
+        stopDelayMs={200}
+        height='3'
+      />
       <OfflineBanner />
       <Header />
-      <main>
-        <motion.div
-          initial={{
-            opacity: 0,
-            transform: 'scale(0.99)',
-            filter: 'blur(5px)',
-          }}
-          animate={{ opacity: 1, transform: 'scale(1)', filter: 'blur(0px)' }}
-          exit={{ opacity: 0, transform: 'scale(0.99)', filter: 'blur(10px)' }}
-        >
-          {children}
-        </motion.div>
-      </main>
+      <main>{children}</main>
       <Footer />
     </>
   );

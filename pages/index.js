@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 export default function Home() {
   return (
-    <Layout pageTitle='Home'>
+    <Layout pageTitle="Home">
       <h1>Home page</h1>
       <p>
         It is a long established fact that a reader will be distracted by the

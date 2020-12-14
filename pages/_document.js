@@ -4,13 +4,13 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang='en'>
+      <Html lang="en">
         <Head>
-          <link rel='manifest' href='/manifest.json' />
-          <link rel='icon' href='/images/icon-192.png' />
-          <link rel='apple-touch-icon' href='/images/icon-192.png' />
-          <meta name='theme-color' content='#317EFB' />
-          <meta name='description' content='Put your description here.' />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="icon" href="/images/icon-192.png" />
+          <link rel="apple-touch-icon" href="/images/icon-192.png" />
+          <meta name="theme-color" content="#317EFB" />
+          <meta name="description" content="Put your description here." />
         </Head>
         <body>
           <Main />

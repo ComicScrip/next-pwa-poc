@@ -1,32 +1,34 @@
-import Layout from '../components/Layout';
 import axios from 'axios';
 import { useState } from 'react';
+import Layout from '../components/Layout';
 
-const getContacts = () =>
+const getPosts = () =>
   axios
-    .get('https://contacts-api.comicscrip.duckdns.org/contacts')
+    .get('https://jsonplaceholder.typicode.com/posts')
     .then((res) => res.data);
 
 export default function ContactList({ initialContactList = [] }) {
-  const [contacts, setContacts] = useState(initialContactList);
-  const handleReload = () => getContacts().then(setContacts);
+  const [posts, setPosts] = useState(initialContactList);
+  const handleReload = () => getPosts().then(setPosts);
 
   return (
-    <Layout pageTitle='Dynamic content'>
+    <Layout pageTitle="Dynamic content">
       <ul>
-        {contacts.map((contact) => (
-          <li key={contact.id}>{contact.name}</li>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
         ))}
       </ul>
-      <button onClick={handleReload}>Reload</button>
+      <button type="button" onClick={handleReload}>
+        Reload
+      </button>
     </Layout>
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   return {
     props: {
-      initialContactList: await getContacts(),
+      initialContactList: await getPosts(),
     },
   };
 }
