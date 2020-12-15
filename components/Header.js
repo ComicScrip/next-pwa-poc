@@ -7,17 +7,17 @@ export default function Header() {
       <nav>
         <ul className={styles.menu}>
           <li className={styles.menuItem}>
-            <Link href='/'>
+            <Link href="/">
               <a className={styles.link}>Home</a>
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href='/dynamic-content'>
+            <Link href="/dynamic-content">
               <a className={styles.link}>Dynamic content</a>
             </Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href='/about'>
+            <Link href="/about">
               <a className={styles.link}>About Us</a>
             </Link>
           </li>

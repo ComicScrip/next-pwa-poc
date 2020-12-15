@@ -11,10 +11,10 @@ export default function Layout({ children, pageTitle }) {
         <title>{pageTitle ? `${pageTitle} - ` : ''}My App</title>
       </Head>
       <NextNprogress
-        color='#29D'
+        color="#29D"
         startPosition={0.3}
         stopDelayMs={200}
-        height='3'
+        height="3"
       />
       <OfflineBanner />
       <Header />
