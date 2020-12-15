@@ -8,7 +8,9 @@ export default function Header() {
         <ul className={styles.menu}>
           <li className={styles.menuItem}>
             <Link href="/">
-              <a className={styles.link}>Home</a>
+              <a href="" className={styles.link}>
+                Home
+              </a>
             </Link>
           </li>
           <li className={styles.menuItem}>

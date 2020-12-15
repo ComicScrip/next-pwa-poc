@@ -1,8 +1,9 @@
-import OfflineBanner from './OfflineBanner';
+import NextNprogress from 'nextjs-progressbar';
 import Head from 'next/head';
+
+import OfflineBanner from './OfflineBanner';
 import Header from './Header';
 import Footer from './Footer';
-import NextNprogress from 'nextjs-progressbar';
 
 export default function Layout({ children, pageTitle }) {
   return (

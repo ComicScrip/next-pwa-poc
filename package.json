@@ -8,6 +8,7 @@
     "start": "next start",
     "resetsw-and-lauch": "rm public/sw.js && rm public/workbox-* ; next build && next start",
     "lint": "eslint .",
+    "lint:staged": "npx lint-staged",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
   },
@@ -19,14 +20,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx lint-staged"
+      "pre-commit": "npm-run-all lint:staged lint"
     }
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
-      "eslint . --fix",
-      "eslint ."
+      "eslint . --fix"
     ]
   },
   "dependencies": {
